@@ -3,14 +3,27 @@
    "name":"impact-service-public-numerique",
    "title":"Schéma de l'impact d'un service public numérique",
    "description":"Spécification du fichier de l'impact d'un service public numérique",
+   "keywords" : [
+     "service-public-numerique", 
+     "impact", 
+     "statistique"
+   ],
    "countryCode":"FR",
    "homepage":"https://github.com/etalab/schema-impact-service-numerique-public",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.1/schema.json",
    "licenses":[
       {
          "title":"Etalab Licence Ouverte 2.0",
          "name":"etalab-2.0",
          "path":"https://spdx.org/licenses/etalab-2.0.html"
       }
+   ],
+   "resources":[
+     {
+       "title":"Fichier valide (CSV)",
+       "name":"exemple-valide-csv",
+       "path":"https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.1/exemple-valide.csv"
+     }
    ],
    "created":"2022-04-20",
    "lastModified":"2022-04-20",
@@ -26,15 +39,15 @@
            "title":"Mario Restuccia",
            "email":"mario.restuccia@data.gouv.fr",
            "organisation":"Etalab",
-         "role":"contributor"
-      }
+           "role":"contributor"
+      },
       {
            "title":"Geoffrey Aldebert",
            "email":"geoffrey.aldebert@data.gouv.fr",
            "organisation":"Etalab",
            "role":"contributor"
-        }
-{
+        },
+       {
            "title":"Florian Delezenne",
            "email":"florian.delezenne@beta.gouv.fr",
            "organisation":"beta.gouv.fr",
@@ -42,21 +55,28 @@
         }
    ],
    "fields":[
-      {
+        {
+         "name":"nom_service_public_numerique",
+         "description":"Nom du service public numérique",
+         "example":"Trackdéchets",
+         "type":"string",
+         "constraints":{
+            "required":true
+         }
+   
+         {
          "name":"indicateur",
          "description":"Intitulé de l’indicateur.",
          "example":"Nombre d'utilisateurs inscrits",
          "type":"string",
          "constraints":{
-            "required":true,
-            "minimum":1
-         }
+            "required":true         
       },
       {
          "name":"unite_mesure",
          "description":"Unité de la mesure d'impact. Ex : %, jours...",
          "example":"%",
-         "type":"---",
+         "type":"string",
          "constraints":{
             "required":true
          }
@@ -64,7 +84,7 @@
       {
          "name":"periodicite",
          "description":"Fréquence de calcul, de collecte ou de parution de l’indicateur.",
-         "example":"Annuel, Semestriel, Trimestriel, Mensuel, Hebodmadaire, Quotidien",
+         "example":"Annuelle",
          "type":"string",
          "constraints":{
             "required":true
@@ -74,7 +94,7 @@
          "name":"periode",
          "description":"Période se réfère à la mesure (YYYY-MM-DD). Pour annuel indiquer 2020-12-31 ; pour mensuel, le dernier jour du mois.",
          "example":"2020-12-31",
-         "type":"number",
+         "type":"date",
          "constraints": {
                 "required":true
             }
@@ -104,7 +124,12 @@
          "name":"sens_evolution",
          "description":"Sens d’évolution souhaité (à la hausse / à la baisse).",
          "type":"string",
-        },
+         "constraints": {
+           "enum":[
+                    "À la hausse",
+                    "À la baisse"
+                  ]
+        }
          }
       }
    ],
