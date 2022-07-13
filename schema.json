@@ -104,22 +104,22 @@
          "name": "mode_collecte",
          "description": "Préciser les modalités de collecte des données : automatisé, comptages manuels, enquêtes, etc.",
          "example": "Automatisé",
-         "type": "string",
+         "type": "string"
       },
       {
          "name": "mode_calcul",
          "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
-         "type": "string",
+         "type": "string"
       },
       {
          "name": "limites",
          "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites.",
-         "type": "string",
+         "type": "string"
       },
       {
          "name": "modalites_interpretation",
          "description": "Si nécessaire, préciser la signification, les modalités de lecture et de compréhension de l’indicateur.",
-         "type": "string",
+         "type": "string"
       },
       {
          "name": "sens_evolution",
@@ -132,7 +132,6 @@
             ]
          }
       }
-   }
-],
-"primaryKey": "indicateur"
+   ],
+   "primaryKey": "indicateur"
 }
