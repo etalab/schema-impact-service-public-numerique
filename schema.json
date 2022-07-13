@@ -63,8 +63,8 @@
          "constraints": {
             "required": true
          }
-      }
-         {
+      },
+      {
          "name": "indicateur",
          "description": "Intitulé de l’indicateur.",
          "example": "Nombre d'utilisateurs inscrits",
@@ -72,7 +72,7 @@
          "constraints": {
             "required": true
          }
-      }
+      },
       {
          "name": "unite_mesure",
          "description": "Unité de la mesure d'impact. Ex : %, jours...",
