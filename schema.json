@@ -73,6 +73,15 @@
             "required": true
          }
       },
+     {
+         "name": "valeur",
+         "description": "Valeur",
+         "example": "100000",
+         "type": "number",
+         "constraints": {
+            "required": true
+         }
+      },
       {
          "name": "unite_mesure",
          "description": "Unité de la mesure d'impact. Ex : %, jours...",
@@ -83,18 +92,24 @@
          }
       },
       {
-         "name": "periodicite",
+         "name": "frequence_calcul",
          "description": "Fréquence de calcul, de collecte ou de parution de l’indicateur.",
-         "example": "Annuelle",
+         "example": "Quotidienne", "Hebdomadaire", "Mensuelle", "Annuelle", "Trimestrielle", "Continue",
          "type": "string",
          "constraints": {
             "required": true
          }
       },
+       {
+         "name": "frequence_affichage",
+         "description": "Periodicité d'affichage de l'indicateur, si différente de la périodicité de calcul",
+         "example": "Quotidienne", "Hebdomadaire", "Mensuelle", "Annuelle", "Trimestrielle", "Continue",
+         "type": "string"
+      },
       {
          "name": "periode",
-         "description": "Période se réfère à la mesure (YYYY-MM-DD). Pour annuel indiquer 2020-12-31 ; pour mensuel, le dernier jour du mois.",
-         "example": "2020-12-31",
+         "description": "Période se réfère à la mesure (YYYY-MM-DD). Pour annuel indiquer 2020-01-01 ; pour mensuel, le premier jour du mois; pour hebdomadaire, le premier jour de la semaine.",
+         "example": "2020-01-01",
          "type": "date",
          "constraints": {
             "required": true
@@ -109,20 +124,12 @@
       {
          "name": "mode_calcul",
          "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
+         "example" : "Somme", "Moyenne", "Nombre de valeurs distinctes", "Somme cumulée de ...", "Nombre cumulé de lignes", "Écart-type de ...", "Minimum de ...", "Maximum de",
          "type": "string"
       },
+     
       {
-         "name": "limites",
-         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites.",
-         "type": "string"
-      },
-      {
-         "name": "modalites_interpretation",
-         "description": "Si nécessaire, préciser la signification, les modalités de lecture et de compréhension de l’indicateur.",
-         "type": "string"
-      },
-      {
-         "name": "sens_evolution",
+         "name": "sens_evolution_souhaite",
          "description": "Sens d’évolution souhaité (à la hausse / à la baisse).",
          "type": "string",
          "constraints": {
@@ -130,7 +137,12 @@
                "À la hausse",
                "À la baisse"
             ]
-         }
+         }, 
+      {
+         "name": "commentaires",
+         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d'interpretation de l'indicateur",
+         "type": "string"
+      }
       }
    ],
    "primaryKey": "indicateur"
