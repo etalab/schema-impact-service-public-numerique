@@ -15,7 +15,7 @@ Les producteurs pourront :
 - publier les données directement sur data.gouv.fr, après avoir créé une organisation au nom de leur service public numérique ;
 - demander la publication de ces données au nom de [l’organisation beta.gouv.fr](https://www.data.gouv.fr/fr/organizations/beta-gouv-fr/), si le service fait partie de l’Incubateur beta.gouv.fr.
 
-Nous préconisons aux producteurs de données de publier leurs fichiers avec la règle de nommage suivante : `statistiques_impact_nomduservicepublicnumérique.csv`
+Nous préconisons aux producteurs de données de publier leurs fichiers en format ouvert, facilement réutilisable (par ex. : csv) avec la règle de nommage suivante : `statistiques_impact_nomduservicepublicnumérique.csv`
 
 ## Exemples
 
