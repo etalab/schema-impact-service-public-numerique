@@ -73,7 +73,7 @@
             "required": true
          }
       },
-     {
+      {
          "name": "valeur",
          "description": "Valeur",
          "example": "100000",
@@ -98,7 +98,7 @@
          "type": "string",
          "constraints": {
             "required": true,
-            "enum":[
+            "enum": [
                "Quotidienne",
                "Hebdomadaire",
                "Mensuelle",
@@ -108,13 +108,13 @@
             ]
          }
       },
-       {
+      {
          "name": "frequence_affichage",
          "description": "Periodicité d'affichage de l'indicateur, si différente de la périodicité de calcul",
          "example": "Quotidienne",
-         "type": "string"
+         "type": "string",
          "constraints": {
-            "enum":[
+            "enum": [
                "Quotidienne",
                "Hebdomadaire",
                "Mensuelle",
@@ -142,10 +142,9 @@
       {
          "name": "mode_calcul",
          "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
-         "example" : "Moyenne",
+         "example": "Moyenne",
          "type": "string"
       },
-     
       {
          "name": "sens_evolution_souhaite",
          "description": "Sens d’évolution souhaité (à la hausse / à la baisse).",
@@ -155,12 +154,12 @@
                "À la hausse",
                "À la baisse"
             ]
-         }, 
+         }
+      },
       {
          "name": "commentaires",
          "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d'interpretation de l'indicateur",
          "type": "string"
-      }
       }
    ],
    "primaryKey": "indicateur"
