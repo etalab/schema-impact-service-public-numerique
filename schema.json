@@ -94,17 +94,35 @@
       {
          "name": "frequence_calcul",
          "description": "Fréquence de calcul, de collecte ou de parution de l’indicateur.",
-         "example": "Quotidienne", "Hebdomadaire", "Mensuelle", "Annuelle", "Trimestrielle", "Continue",
+         "example": "Quotidienne",
          "type": "string",
          "constraints": {
-            "required": true
+            "required": true,
+            "enum":[
+               "Quotidienne",
+               "Hebdomadaire",
+               "Mensuelle",
+               "Annuelle",
+               "Trimestrielle",
+               "Continue"
+            ]
          }
       },
        {
          "name": "frequence_affichage",
          "description": "Periodicité d'affichage de l'indicateur, si différente de la périodicité de calcul",
-         "example": "Quotidienne", "Hebdomadaire", "Mensuelle", "Annuelle", "Trimestrielle", "Continue",
+         "example": "Quotidienne",
          "type": "string"
+         "constraints": {
+            "enum":[
+               "Quotidienne",
+               "Hebdomadaire",
+               "Mensuelle",
+               "Annuelle",
+               "Trimestrielle",
+               "Continue"
+            ]
+         }
       },
       {
          "name": "periode",
@@ -124,7 +142,7 @@
       {
          "name": "mode_calcul",
          "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
-         "example" : "Somme", "Moyenne", "Nombre de valeurs distinctes", "Somme cumulée de ...", "Nombre cumulé de lignes", "Écart-type de ...", "Minimum de ...", "Maximum de",
+         "example" : "Moyenne",
          "type": "string"
       },
      
