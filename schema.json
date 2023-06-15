@@ -109,58 +109,73 @@
          }
       },
       {
-         "name": "frequence_affichage",
-         "description": "Periodicité d'affichage de l'indicateur, si différente de la périodicité de calcul",
-         "example": "Quotidienne",
-         "type": "string",
+         "name": "date",
+         "description": "Date arretée de la mesure de l'indicateur.",
+         "example": "2020-01-01",
+         "type": "date",
+         "format": "%Y-%m-%d",
          "constraints": {
-            "enum": [
-               "Quotidienne",
-               "Hebdomadaire",
-               "Mensuelle",
-               "Annuelle",
-               "Trimestrielle",
-               "Continue"
-            ]
+            "required": true
          }
       },
       {
-         "name": "periode",
-         "description": "Période se réfère à la mesure (YYYY-MM-DD). Pour annuel indiquer 2020-01-01 ; pour mensuel, le premier jour du mois; pour hebdomadaire, le premier jour de la semaine.",
-         "example": "2020-01-01",
-         "type": "date",
+         "name": "est_periode",
+         "description": "Booléen indiquant si la mesure est faite sur une période (true) ou si c'est un stock (false)",
+         "example": "true",
+         "type": "boolean",
          "constraints": {
             "required": true
+         }
+      },
+      {
+         "name": "date_debut",
+         "description": "Date du début de la période de mesure.",
+         "example": "2020-01-01",
+         "type": "date",
+         "format": "%Y-%m-%d",
+         "constraints": {
+            "required": false
          }
       },
       {
          "name": "mode_collecte",
          "description": "Préciser les modalités de collecte des données : automatisé, comptages manuels, enquêtes, etc.",
          "example": "Automatisé",
-         "type": "string"
+         "type": "string",
+         "constraints": {
+            "required": true,
+            "enum": ["Manuel", "Automatisé", "Enquête", "Autre"]
+         }
       },
       {
          "name": "mode_calcul",
          "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
          "example": "Moyenne",
-         "type": "string"
+         "type": "string",
+         "constraints": {
+            "required": true
+         }
       },
       {
          "name": "sens_evolution_souhaite",
-         "description": "Sens d’évolution souhaité (à la hausse / à la baisse).",
+         "description": "Sens d’évolution souhaité.",
          "type": "string",
          "constraints": {
+            "required": true,
             "enum": [
                "À la hausse",
-               "À la baisse"
+               "À la baisse",
+               "Stable"
             ]
          }
       },
       {
          "name": "commentaires",
          "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d'interpretation de l'indicateur",
-         "type": "string"
+         "type": "string",
+         "constraints": {
+            "required": false
+         }
       }
-   ],
-   "primaryKey": "indicateur"
+   ]
 }
