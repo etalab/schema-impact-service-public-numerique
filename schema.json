@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.1/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/blob/master/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,12 +22,12 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.1/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/blob/master/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
-   "lastModified": "2022-08-09",
-   "version": "0.2.0",
+   "lastModified": "2023-07-06",
+   "version": "0.2.2",
    "contributors": [
       {
          "title": "Julieta Barado",
@@ -44,13 +44,19 @@
       {
          "title": "Geoffrey Aldebert",
          "email": "geoffrey.aldebert@data.gouv.fr",
-         "organisation": "Etalab",
+         "organisation": "data.gouv.fr",
          "role": "contributor"
       },
       {
          "title": "Florian Delezenne",
          "email": "florian.delezenne@beta.gouv.fr",
          "organisation": "beta.gouv.fr",
+         "role": "contributor"
+      },
+      {
+         "title": "Pierlou Ramade",
+         "email": "pierlou.ramade@data.gouv.fr",
+         "organisation": "data.gouv.fr",
          "role": "contributor"
       }
    ],
@@ -84,7 +90,7 @@
       },
       {
          "name": "unite_mesure",
-         "description": "Unité de la mesure d'impact. Ex : %, jours...",
+         "description": "Unité de la mesure d'impact. Ex : %, jours, unités...",
          "example": "%",
          "type": "string",
          "constraints": {
@@ -93,24 +99,24 @@
       },
       {
          "name": "frequence_calcul",
-         "description": "Fréquence de calcul, de collecte ou de parution de l’indicateur.",
-         "example": "Quotidienne",
+         "description": "Fréquence de calcul ou de collecte de l’indicateur. NB : Peut-être différente de la fréquence de publication : il est possible de monitorer un indicateur quotidiennement mais de ne le publier que tous les mois par exemple.",
+         "example": "quotidienne",
          "type": "string",
          "constraints": {
             "required": true,
             "enum": [
-               "Quotidienne",
-               "Hebdomadaire",
-               "Mensuelle",
-               "Annuelle",
-               "Trimestrielle",
-               "Continue"
+               "quotidienne",
+               "hebdomadaire",
+               "mensuelle",
+               "annuelle",
+               "trimestrielle",
+               "autre"
             ]
          }
       },
       {
          "name": "date",
-         "description": "Date arretée de la mesure de l'indicateur.",
+         "description": "Date arretée de la mesure de l'indicateur, ou date de fin de la période si l'indicateur porte sur un laps de temps.",
          "example": "2020-01-01",
          "type": "date",
          "format": "%Y-%m-%d",
@@ -129,7 +135,7 @@
       },
       {
          "name": "date_debut",
-         "description": "Date du début de la période de mesure.",
+         "description": "Date du début de la période de mesure (si pertinent).",
          "example": "2020-01-01",
          "type": "date",
          "format": "%Y-%m-%d",
@@ -139,39 +145,44 @@
       },
       {
          "name": "mode_collecte",
-         "description": "Préciser les modalités de collecte des données : automatisé, comptages manuels, enquêtes, etc.",
-         "example": "Automatisé",
+         "description": "Préciser si la collecte des données est automatisée ou manuelle.",
+         "example": "automatisé",
          "type": "string",
          "constraints": {
             "required": true,
-            "enum": ["Manuel", "Automatisé", "Enquête", "Autre"]
+            "enum": ["manuel", "automatisé"]
          }
       },
       {
-         "name": "mode_calcul",
-         "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base (ex : formule paramétrique ou pondération des données locales), en distinguant dans le cas d’un ratio, le numérateur et le dénominateur. Si nécessaire, fournir un exemple de calcul.",
-         "example": "Moyenne",
+         "name": "source_collecte",
+         "description": "Préciser comment la collecte est réalisée : script, enquête...",
+         "example": "Automatisé",
          "type": "string",
          "constraints": {
             "required": true
          }
       },
       {
-         "name": "sens_evolution_souhaite",
-         "description": "Sens d’évolution souhaité.",
+         "name": "mode_calcul",
+         "description": "Façon dont est calculé ou agrégé l’indicateur à partir des données de base : nombre, moyenne, ratio, etc. Si nécessaire, fournir un exemple de calcul.",
+         "example": "moyenne",
          "type": "string",
          "constraints": {
-            "required": true,
-            "enum": [
-               "À la hausse",
-               "À la baisse",
-               "Stable"
-            ]
+            "required": true
+         }
+      },
+      {
+         "name": "cible_indicateur",
+         "description": "Cible vers laquelle il est souhaité que l'indicateur tende. NB : si l'indacteur doit croître (respectivement décroître) indéfiniment indiquer INF (respectivement -INF).",
+         "type": "number",
+         "example": 100,
+         "constraints": {
+            "required": true
          }
       },
       {
          "name": "commentaires",
-         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d'interpretation de l'indicateur",
+         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d'interpretation de l'indicateur.",
          "type": "string",
          "constraints": {
             "required": false
