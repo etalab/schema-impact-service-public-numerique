@@ -1,2 +1,2 @@
-nom_service_public_numerique,indicateur,valeur,unite_mesure,frequence_calcul,date,est_periode,date_debut,mode_collecte,source_collecte,mode_calcul,cible_indicateur,commentaires
-Registre de Preuve de covoiturage,Nombre de trajets réalisés,143,unités,annuelle,2020-12-31,false,,automatisé,script,nombre,INF,Beaucoup de biais
+nom_service_public_numerique,indicateur,valeur,unite_mesure,est_cible,frequence_calcul,date,est_periode,date_debut,est_automatise,source_collecte,mode_calcul,commentaires
+Registre de Preuve de covoiturage,Nombre de trajets réalisés,143,unités,false,annuelle,2020-12-31,false,,true,script,nombre,Beaucoup de biais
