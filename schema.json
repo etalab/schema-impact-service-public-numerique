@@ -105,7 +105,7 @@
       },
       {
          "name": "unite_mesure",
-         "description": "Unité de l’indicateur. Ex : %, jour, unité... NB : lorsqu’il s’agit d’un comptage ('nombre de X' dans le champ 'indicateur'), indiquer 'unité'.",
+         "description": "Unité de l’indicateur. Ex : %, jour, unité, note sur 10... NB : lorsqu’il s’agit d’un comptage ('nombre de X' dans le champ 'indicateur'), indiquer 'unité'.",
          "example": "unité",
          "type": "string",
          "constraints": {
@@ -193,6 +193,21 @@
          "type": "string",
          "constraints": {
             "required": false
+         }
+      },
+      {
+         "name": "dataviz_wish",
+         "description": "Indication pour les producteurs de visualisation du type de dataviz approprié pour cet indicateur.",
+         "example": "linechart",
+         "type": "string",
+         "constraints": {
+            "required": false,
+            "enum": [
+               "linechart",
+               "barchart",
+               "map",
+               "scatterplot"
+            ]
          }
       },
       {
