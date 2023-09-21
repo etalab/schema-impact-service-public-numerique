@@ -213,7 +213,7 @@
       },
       {
          "name": "commentaires",
-         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d’interpretation de l’indicateur ; si l'indicateur est obsolète.",
+         "description": "Préciser les limites et biais connus et justifier le choix de l’indicateur malgré ses limites ; les modalites de lecture et d’interpretation de l’indicateur ; si l’indicateur est obsolète.",
          "type": "string",
          "constraints": {
             "required": false
