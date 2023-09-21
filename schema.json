@@ -87,7 +87,7 @@
       },
       {
          "name": "indicateur",
-         "description": "Intitulé de l’indicateur. NB : ce champ est non contraint, mais il convient de garder la même syntaxe au cours du temps pour un même indicateur.",
+         "description": "Intitulé de l’indicateur. Pour chaque mesure du même indicateur, il convient de renseigner le même intitulé, la date de mesure indiquant l'évolution dans le temps. NB : ce champ est non contraint, mais il convient de garder la même syntaxe au cours du temps pour un même indicateur.",
          "example": "Nombre d’utilisateurs inscrits",
          "type": "string",
          "constraints": {
@@ -123,7 +123,7 @@
       },
       {
          "name": "frequence_monitoring",
-         "description": "Fréquence à laquelle l’indicateur est consulté par le service. NB : Peut-être différente de la fréquence de publication : il est possible de monitorer un indicateur quotidiennement mais de ne le publier que tous les mois par exemple.",
+         "description": "Fréquence à laquelle l’indicateur est consulté et utilisé par le service. NB : Peut-être différente de la fréquence de publication : il est possible de monitorer un indicateur quotidiennement mais de ne le publier que tous les mois par exemple.",
          "example": "quotidienne",
          "type": "string",
          "constraints": {
@@ -188,7 +188,7 @@
       },
       {
          "name": "code_insee",
-         "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser le code INSEE de cette échelle.",
+         "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser le code INSEE de cette échelle (trouvable ici : https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/).",
          "example": "63113",
          "type": "string",
          "constraints": {
@@ -206,7 +206,8 @@
                "linechart",
                "barchart",
                "map",
-               "scatterplot"
+               "scatterplot",
+               "piechart"
             ]
          }
       },
