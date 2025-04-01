@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.1/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.0/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,12 +22,12 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.1/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.0/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
    "lastModified": "2025-04-01",
-   "version": "v0.3.1",
+   "version": "v0.4.0",
    "contributors": [
       {
          "title": "Julieta Barado",
