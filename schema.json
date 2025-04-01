@@ -193,7 +193,8 @@
          "type": "string",
          "constraints": {
             "required": false
-      },
+      	}
+	},
       {
          "name": "code_insee",
          "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser le code INSEE de cette échelle (trouvable ici : https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/).",
