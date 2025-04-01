@@ -2,7 +2,7 @@
 
 Ce fichier répertorie les changements entre différentes versions d'un schéma.
 
-## Version 0.3.1 - 2025-04-01
+## Version 0.4.0 - 2025-04-01
 
 - Modifications après feedback de la DGALN sur le code INSEE
 
