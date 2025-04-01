@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.0/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.1/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,12 +22,12 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.0/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.3.1/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
-   "lastModified": "2023-09-20",
-   "version": "v0.3.0",
+   "lastModified": "2025-04-01",
+   "version": "v0.3.1",
    "contributors": [
       {
          "title": "Julieta Barado",
@@ -186,6 +186,15 @@
             "required": true
          }
       },
+	{
+         "name": "denom_insee",
+         "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser l'échelon géographique INSEE concerné, entre REG, DEP, COM, CTCD, ARR, COMER, COG... (trouvable ici : https://www.insee.fr/fr/information/8377162).",
+         "example": "REG",
+         "type": "string",
+         "constraints": {
+            "required": false
+      	}
+	},
       {
          "name": "code_insee",
          "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser le code INSEE de cette échelle (trouvable ici : https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/).",
