@@ -186,6 +186,14 @@
             "required": true
          }
       },
+	{
+         "name": "denom_insee",
+         "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser l'échelon géographique INSEE concerné, entre REG, DEP, COM, CTCD, ARR, COMER, COG... (trouvable ici : https://www.insee.fr/fr/information/8377162).",
+         "example": "REG",
+         "type": "string",
+         "constraints": {
+            "required": false
+      },
       {
          "name": "code_insee",
          "description": "Si l'indicateur est calculé à une certaine échelle géographique, préciser le code INSEE de cette échelle (trouvable ici : https://www.data.gouv.fr/fr/datasets/code-officiel-geographique-cog/).",
