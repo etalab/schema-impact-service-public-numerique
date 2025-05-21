@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.1/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,12 +22,12 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.1/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
    "lastModified": "2025-05-20",
-   "version": "v0.4.1",
+   "version": "v0.5.0",
    "contributors": [
       {
          "title": "Andy Barakat",
@@ -129,7 +129,7 @@
       },
       {
          "name": "type_indicateur",
-         "description": "Type de l'indicateur. Ex: Usage ou Impact. Pour plus d'information, se référer à la documentation: https://doc.incubateur.net/communaute/gerer-son-produit/guide-de-financement-des-startups-detat/4.-lenjeu-du-pilotage-par-limpact#les-indicateurs-pour-les-mesurer",
+         "description": "Type de l'indicateur. Pour plus d'information, se référer à la documentation: https://doc.incubateur.net/communaute/gerer-son-produit/guide-de-financement-des-startups-detat/4.-lenjeu-du-pilotage-par-limpact#les-indicateurs-pour-les-mesurer",
          "example": "usage",
          "type": "string",
          "constraints": {

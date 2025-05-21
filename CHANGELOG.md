@@ -2,13 +2,13 @@
 
 Ce fichier répertorie les changements entre différentes versions d'un schéma.
 
-## Version 0.4.1 - 2025-05-20
+## Version 0.5.0 - 2025-05-20
 
 - Modifications après feedback de la DGALN sur le type de l'indicateur
 
 ## Version 0.4.0 - 2025-04-01
 
-- Modifications après feedback de la DGALN sur le code INSEE>
+- Modifications après feedback de la DGALN sur le code INSEE
 
 ## Version 0.3.0 - 2023-09-20
 
