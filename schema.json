@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.0/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,13 +22,19 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.4.0/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
-   "lastModified": "2025-04-01",
-   "version": "v0.4.0",
+   "lastModified": "2025-05-20",
+   "version": "v0.5.0",
    "contributors": [
+      {
+         "title": "Andy Barakat",
+         "email": "andy.barakat@developpement-durable.gouv.fr",
+         "organisation": "DGALN",
+         "role": "contributor"
+      },
       {
          "title": "Julieta Barado",
          "email": "julieta.barado@data.gouv.fr",
@@ -119,6 +125,19 @@
          "type": "boolean",
          "constraints": {
             "required": true
+         }
+      },
+      {
+         "name": "type_indicateur",
+         "description": "Type de l'indicateur. Pour plus d'information, se référer à la documentation: https://doc.incubateur.net/communaute/gerer-son-produit/guide-de-financement-des-startups-detat/4.-lenjeu-du-pilotage-par-limpact#les-indicateurs-pour-les-mesurer",
+         "example": "usage",
+         "type": "string",
+         "constraints": {
+            "required": true,
+            "enum": [
+               "usage",
+               "impact"
+            ]
          }
       },
       {
