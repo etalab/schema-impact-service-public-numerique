@@ -2,7 +2,7 @@
 
 ## Contexte sur les données d’impact des services publics numériques
 
-Les métriques d’impact des services publics numériques sont constituées par les équipes afin de définir l’effet attendu de leur produit, diriger l’investissement et le budget, faire des comptes rendus, et recevoir du soutien politique.
+Les métriques d’impact, d'usage et de coût des services publics numériques sont constituées par les équipes afin de définir l’effet attendu de leur produit, diriger l’investissement et le budget, faire des comptes rendus, et recevoir du soutien politique.
 
 Plus d’informations sur la mesure d’impact : [ici](https://doc.incubateur.net/communaute/gerer-son-produit/readme-doc-incubateur-net/impact/la-page-stats-est-construite-selon-la-matrice-impact).
 

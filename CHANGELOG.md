@@ -2,6 +2,11 @@
 
 Ce fichier répertorie les changements entre différentes versions d'un schéma.
 
+## Version 1.0.0 - 2025-09-03
+
+- Ajout de la valeur "coût" pour le champ `type_indicateur`
+- Ajout d'une contrainte `enum` pour le champ `unite_mesure`
+
 ## Version 0.5.0 - 2025-05-20
 
 - Modifications après feedback de la DGALN sur le type de l'indicateur

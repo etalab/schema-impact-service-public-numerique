@@ -10,7 +10,7 @@
    ],
    "countryCode": "FR",
    "homepage": "https://github.com/etalab/schema-impact-service-numerique-public",
-   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/schema.json",
+   "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v1.0.0/schema.json",
    "licenses": [
       {
          "title": "Etalab Licence Ouverte 2.0",
@@ -22,12 +22,12 @@
       {
          "title": "Fichier valide (CSV)",
          "name": "exemple-valide-csv",
-         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v0.5.0/exemple-valide.csv"
+         "path": "https://github.com/etalab/schema-impact-service-public-numerique/raw/v1.0.0/exemple-valide.csv"
       }
    ],
    "created": "2022-04-20",
-   "lastModified": "2025-05-20",
-   "version": "v0.5.0",
+   "lastModified": "2025-09-03",
+   "version": "v1.0.0",
    "contributors": [
       {
          "title": "Andy Barakat",
@@ -111,11 +111,24 @@
       },
       {
          "name": "unite_mesure",
-         "description": "Unité de l’indicateur. Ex : %, jour, unité, note sur 10... NB : lorsqu’il s’agit d’un comptage ('nombre de X' dans le champ 'indicateur'), indiquer 'unité'.",
+         "description": "Unité de l’indicateur. NB : lorsqu’il s’agit d’un comptage ('nombre de X' dans le champ 'indicateur'), indiquer 'unité'.",
          "example": "unité",
          "type": "string",
          "constraints": {
-            "required": true
+            "required": true,
+            "enum": [
+               "unité",
+               "mètre",
+               "mètre carré",
+               "mètre cube",
+               "heure",
+               "euro",
+               "kilogramme",
+               "%",
+               "kilowatt-heure",
+               "tonne éq. CO2",
+               "note"
+            ]
          }
       },
       {
@@ -136,7 +149,8 @@
             "required": true,
             "enum": [
                "usage",
-               "impact"
+               "impact",
+               "coût"
             ]
          }
       },
